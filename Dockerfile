@@ -23,7 +23,7 @@ RUN \
 	wget https://github.com/tModLoader/tModLoader/releases/download/v0.11.8.9/tModLoader.Linux.v0.11.8.9.zip &&\
 	unzip tModLoader.Linux.v*.zip &&\
 	rm tModLoader.Linux.v*.zip &&\
-	chmod u+x tModLoaderServer* &&\
+	chmod u+x tModLoaderServer &&\
 	\
 	# access data directory \
 	ln -s ${HOME}/.local/share/Terraria/ /terraria &&\
