@@ -1,6 +1,5 @@
 # METADATA
-FROM debian:testing-slim
-LABEL maintainer="jmm@yavook.de"
+FROM ubuntu:focal
 
 RUN \
 	# system update \
@@ -13,22 +12,22 @@ RUN \
 	cd /terraria-server &&\
 	\
 	# get vanilla server \
-	wget http://terraria.org/server/terraria-server-1353.zip &&\
+	wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1436.zip &&\
 	unzip terraria-server-*.zip &&\
 	rm terraria-server-*.zip &&\
-	cp --verbose -a 1353/. . &&\
-	rm -rf 1353 &&\
+	cp --verbose -a 1436/. . &&\
+	rm -rf 1436 &&\
 	\
 	# add in tModLoader \
 	cd Linux &&\
-	wget https://github.com/blushiemagic/tModLoader/releases/download/v0.10.1.5/tModLoader.Linux.v0.10.1.5.zip &&\
+	wget https://github.com/tModLoader/tModLoader/releases/download/v0.11.8.9/tModLoader.Linux.v0.11.8.9.zip &&\
 	unzip tModLoader.Linux.v*.zip &&\
 	rm tModLoader.Linux.v*.zip &&\
 	chmod u+x tModLoaderServer* &&\
 	\
 	# access data directory \
 	ln -s ${HOME}/.local/share/Terraria/ /terraria &&\
-	# remove Leftovers \
+	# remove unneeded files \
 	cd .. &&\
 	rm -rf Windows Mac
 
