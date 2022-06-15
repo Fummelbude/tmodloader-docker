@@ -4,11 +4,11 @@ Terraria server 1.4.3.6 with tModLoader v0.11.8.9
 
 ## Quick Start
 
-    docker run -it --name terraria -p 7777:7777 ldericher/tmodloader
+    docker run -it --name terraria -p 7777:7777 rollio/tmodloaderv11-docker
 
 # Adding worlds
 
-    docker run -it --name terraria -p 7777:7777 -v /path/to/.../terraria:/terraria ldericher/tmodloader
+    docker run -it --name terraria -p 7777:7777 -v /path/to/.../terraria:/terraria rollio/tmodloaderv11-docker
 
 # More info
 
