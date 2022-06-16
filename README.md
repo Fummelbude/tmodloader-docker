@@ -6,7 +6,7 @@ use this branch to add your own mods
 
 # Starting image
 # Adding worlds and mods
-# Be sure your world name starts with tmod! Otherwise it will not work!
+# Be sure your world name is tmod! Otherwise you will need to edit the config file
 
 
     docker run -d --name terraria -p 7777:7777 -v /path/to/terraria/world:/root/.local/share/Terraria/ModLoader/Worlds \
