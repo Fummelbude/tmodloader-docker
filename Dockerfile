@@ -25,8 +25,13 @@ RUN \
 	rm tModLoader.Linux.v*.zip &&\
 	chmod u+x tModLoaderServer* &&\
 	\
-	# access data directory \
-	ln -s ${HOME}/.local/share/Terraria/ /terraria &&\
+	# make and access data directories \
+	ln -s ${HOME}/.local/share/Terraria/Modloader/Mods /terrararia-mods &&\
+	ln -s ${HOME}/.local/share/Terraria/Modloader/Worlds /terraria-worlds
+VOLUME \
+	/terraria-Mods &&\
+	/terraria-Worlds
+RUN \
 	# remove unneeded files \
 	cd .. &&\
 	rm -rf Windows Mac
