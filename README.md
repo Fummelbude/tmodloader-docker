@@ -1,14 +1,13 @@
 # tmodloader-docker
 
 Terraria server 1.4.3.6 with tModLoader v0.11.8.9, forked from ldericher/tmodloader-docker
+use this branch to add your own mods
 
-## Quick Start
+# Starting image
+# Adding worlds and mods
 
-    docker run -it --name terraria -p 7777:7777 rollio/tmodloaderv11-docker
-
-# Adding worlds
-
-    docker run -it --name terraria -p 7777:7777 -v /path/to/.../terraria:/terraria rollio/tmodloaderv11-docker
+    docker run -d --name terraria -p 7777:7777 -v /path/to/terraria/world:/root/.local/share/Terraria/ModLoader/Worlds \
+    -v /path/to/terraria/mods:/root/.local/share/Terraria/ModLoader/Mods rollio/tmodloaderv11-docker
 
 # More info
 
