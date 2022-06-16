@@ -34,10 +34,10 @@ RUN \
 	mkdir /root/.local/share/Terraria/ModLoader/Mods
 
 VOLUME \
-	/root/.local/share/Terraria/ModLoader/Worlds &&\
-	/root/.local/share/Terraria/ModLoader/Mods
-
+	/root/.local/share/Terraria/ModLoader/Worlds
 COPY \
+	Tmod_mods /root/.local/share/Terraria/ModLoader/Mods
+COPY \		
 	serverconfig.txt /terraria-server/Linux/
 	
 RUN \
