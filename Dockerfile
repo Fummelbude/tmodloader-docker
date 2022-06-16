@@ -26,7 +26,17 @@ RUN \
 	chmod u+x tModLoaderServer* &&\
 
 	# make and access data directories \
-	mkdir ${HOME}/.local/
+	mkdir ${HOME}/.local &&\
+	mkdir /root/.local/share &&\
+	mkdir /root/.local/share/Terraria &&\
+	mkdir /root/.local/share/Terraria/ModLoader &&\
+	mkdir /root/.local/share/Terraria/ModLoader/Worlds &&\
+	mkdir /root/.local/share/Terraria/ModLoader/Mods
+
+VOLUME \
+	/root/.local/share/Terraria/ModLoader/Worlds &&\
+	/root/.local/share/Terraria/ModLoader/Mods
+
 COPY \
 	serverconfig.txt /terraria-server/Linux/
 	
