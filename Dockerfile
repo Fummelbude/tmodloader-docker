@@ -26,7 +26,7 @@ RUN \
 	wget https://github.com/tModLoader/tModLoader/releases/download/v${TMOD_VERSION}/tModLoader.zip &&\
 	unzip -o tModLoader.zip &&\
 	rm tModLoader.zip &&\
-	chmod u+x tModLoader &&\
+	chmod u+x start-tModLoaderServer.sh &&\
 
 	# make and access data directories \
 	mkdir ${HOME}/.local &&\
@@ -52,4 +52,4 @@ RUN \
 EXPOSE 7777
 
 # start server
-ENTRYPOINT exec /terraria-server/Linux/tModLoaderServer -config serverconfig.txt
+ENTRYPOINT exec /terraria-server/Linux/start-tModLoaderServer.sh -config serverconfig.txt
