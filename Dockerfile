@@ -1,6 +1,9 @@
 # METADATA
 FROM ubuntu:focal
 
+ARG TMOD_VERSION=2022.05.103.34
+ARG TERRARIA_VERSION=1436
+
 RUN \
 	# system update \
 	apt-get -y update &&\
@@ -12,15 +15,15 @@ RUN \
 	cd /terraria-server &&\
 	\
 	# get vanilla server \
-	wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1436.zip &&\
+	wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-${TERRARIA_VERSION}.zip &&\
 	unzip terraria-server-*.zip &&\
 	rm terraria-server-*.zip &&\
-	cp --verbose -a 1436/. . &&\
-	rm -rf 1436 &&\
+	cp --verbose -a ${TERRARIA_VERSION}/. . &&\
+	rm -rf ${TERRARIA_VERSION} &&\
 	\
 	# add in tModLoader \
 	cd Linux &&\
-	wget https://github.com/tModLoader/tModLoader/releases/download/v0.11.8.9/tModLoader.Linux.v0.11.8.9.zip &&\
+	wget https://github.com/tModLoader/tModLoader/releases/download/v0.11.8.9/tModLoader.Linux.v${TMOD_VERSION}.zip &&\
 	unzip -o tModLoader.Linux.v*.zip &&\
 	rm tModLoader.Linux.v*.zip &&\
 	chmod u+x tModLoaderServer* &&\
