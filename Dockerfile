@@ -44,8 +44,7 @@ COPY \
 	serverconfig.txt /terraria-server/Linux/
 	
 RUN apt-get update && \
-    apt-get install -y libicu-dev && \
-    docker-php-ext-install intl
+    apt-get install -y libicu-dev
 	
 RUN \
 	# remove unneeded files \
