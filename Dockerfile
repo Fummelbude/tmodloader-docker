@@ -24,8 +24,8 @@ RUN \
 	# add in tModLoader \
 	cd Linux &&\
 	wget https://github.com/tModLoader/tModLoader/releases/download/v${TMOD_VERSION}/tModLoader.zip &&\
-	unzip -o tModLoader.Linux.zip &&\
-	rm tModLoader.Linux.zip &&\
+	unzip -o tModLoader.zip &&\
+	rm tModLoader.zip &&\
 	chmod u+x tModLoaderServer* &&\
 
 	# make and access data directories \
