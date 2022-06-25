@@ -26,7 +26,7 @@ RUN \
 	wget https://github.com/tModLoader/tModLoader/releases/download/v${TMOD_VERSION}/tModLoader.zip &&\
 	unzip -o tModLoader.zip &&\
 	rm tModLoader.zip &&\
-	chmod u+x tModLoaderServer* &&\
+	chmod u+x tModLoader &&\
 
 	# make and access data directories \
 	mkdir ${HOME}/.local &&\
