@@ -46,7 +46,7 @@ COPY \
 RUN \
 	# remove unneeded files \
 	cd .. &&\
-	rm -rf Windows Mac
+	rm -rf /terraria-server/Windows /terraria-server/Mac
 
 # ports used
 EXPOSE 7777
