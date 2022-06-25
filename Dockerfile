@@ -52,4 +52,4 @@ RUN \
 EXPOSE 7777
 
 # start server
-ENTRYPOINT exec /terraria-server/Linux/start-tModLoaderServer.sh -config serverconfig.txt
+ENTRYPOINT exec /terraria-server/Linux/start-tModLoaderServer.sh
